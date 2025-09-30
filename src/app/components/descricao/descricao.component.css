@@ -51,6 +51,7 @@ h2{
     height: 268px;
     position: relative;
     top: 30%;
+    
 }
 
 h3{
@@ -75,4 +76,61 @@ h3{
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
+    
+}
+
+.card2{
+    
+    width: 278px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    color: #99a1af;
+    font-family: 'bold',sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card3{
+    
+    width: 278px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    color: #99a1af;
+    font-family: 'bold',sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card4{
+    
+    width: 278px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    color: #99a1af;
+    font-family: 'bold',sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card1:hover{
+    
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.897);
+    padding-block-end: 5px;
+   background: linear-gradient(130deg,rgba(0, 66, 53, 1) 0%, rgba(0, 45, 99, 1) 50%, rgba(33, 0, 99, 1) 100%);
+    border-radius: 10px;
 }
