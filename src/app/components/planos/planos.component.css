@@ -6,6 +6,8 @@
 .conteudo{
     width: 100%;
     height: 1000px;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
@@ -19,6 +21,14 @@ h2{
     top:20%;
     font-weight:700;
     
+}
+
+h3{
+    color: white;
+    font-family: 'bold',sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+
 }
 
 .paragrafo{
@@ -41,4 +51,50 @@ h2{
     width: 100%;
     position: relative;
     top: 22%;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    padding-top: 17%; 
+    height: 713px;
+    width: 1216px;
+    gap: 5%;
+}
+
+.textos{
+    display: flex;
+    width: 332px;
+    height: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-block-end: 10%;
+}
+
+.textos,p{
+    color: #99a1af;
+    font-family: 'bold',sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+span{
+    color: white;
+    font-family: 'bold',sans-serif;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+td{
+    color:  #99a1af;
+    font-family: 'bold',sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.tdtext{
+    width: 270px;
+    text-align: left;
 }
