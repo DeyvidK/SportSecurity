@@ -1,0 +1,18 @@
+<div class="register-container">
+    <button class="close-btn" type="button" (click)="fechar()">×</button>
+  
+    <h2>Cadastre-se</h2>
+    <p class="subtitle">Crie sua conta para continuar</p>
+  
+    <form (submit)="onSubmit($event, nome.value, email.value, senha.value)">
+      <input #nome type="text" placeholder="Nome completo" required />
+      <input #email type="email" placeholder="Email" required />
+      <input #senha type="password" placeholder="Senha" required />
+      <button type="submit" class="register-btn">Cadastrar</button>
+    </form>
+  
+    <p class="login-link">
+      Já tem conta? <a href="#" (click)="abrirLogin($event)">Faça login</a>
+    </p>
+  </div>
+  

@@ -1,0 +1,116 @@
+
+
+/* Conteúdo do modal */
+.login-container {
+  position: relative;
+  width: 380px;
+  background:rgb(0, 1, 14);
+  padding: 30px 40px;
+  border-radius: 15px;
+  border: 1px solid #444;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título e subtítulo */
+.login-container h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* Formulário e inputs */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.login-container input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background:rgb(0, 1, 14);
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.login-container input:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 5px #00bfff;
+}
+
+/* Botão de login */
+.login-btn {
+  background: #00bfff;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  background: #0095d6;
+  color: #fff;
+}
+
+/* Divisor */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+  color: #777;
+}
+.divider span {
+  margin: 0 10px;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #444;
+}
+
+/* Link de cadastro */
+.register-link {
+  font-size: 13px;
+  margin-top: 15px;
+  color: #aaa;
+}
+.register-link a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #00bfff;
+}

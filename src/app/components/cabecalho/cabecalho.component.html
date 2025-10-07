@@ -4,9 +4,19 @@
     </div>
     <nav class="cabecalho-menu">
         <a class="txtnav" href="#">Início</a>
-        <a class="txtnav" href="#">Planos</a>
         <a class="txtnav" href="#">Benefícios</a>
+        <a class="txtnav" href="#">Planos</a>
         <a class="txtnav" href="#">Depoimentos</a>
         <a class="txtnav" href="#">Contato</a>
     </nav>  
+    <a style="padding-right: 20px;" href="#" (click)="modalOpen($event)">Login</a>
 </header>
+
+<dialog #loginDialog #dialogRef id="loginModal" class="modal">
+  <app-login (close)="loginDialog.close()"></app-login>
+
+</dialog>
+
+<dialog #registerDialog class="modal">
+    <app-cadastro (close)="fecharCadastro()"></app-cadastro>
+  </dialog>

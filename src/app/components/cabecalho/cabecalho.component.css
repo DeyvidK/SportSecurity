@@ -46,3 +46,10 @@ nav a{
     font-size: 18px;
     font-family: 'bold', sans-serif;
 }
+
+dialog{
+    border-radius: 20px;
+    left: 38%;
+    top: 25%;
+    
+}

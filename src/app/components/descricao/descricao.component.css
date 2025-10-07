@@ -87,7 +87,7 @@ h3{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 1, 8, 0.8); /* camada preta */
+    background: rgba(0, 1, 14, 0.8); /* camada preta */
 }
 
 .card1:hover{
@@ -123,11 +123,11 @@ h3{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 1, 8, 0.8); /* camada preta */
+    background:rgba(0, 1, 14, 0.8); /* camada preta */
 }
 
 .card2:hover{
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.897);
+    box-shadow: 10px 15px 25px rgb(0, 0, 0);
     margin-block-end: 10px;
     background: linear-gradient(130deg,rgba(0, 79, 89, 1) 51%, rgba(35, 0, 112, 1) 100%);
     transition-duration: 0.2s; 
@@ -159,11 +159,11 @@ h3{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 1, 8, 0.8); /* camada preta */
+    background: rgba(0, 1, 14, 0.8); /* camada preta */
 }
 
 .card3:hover{
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.897);
+    box-shadow: 10px 15px 25px rgb(0, 0, 0);
     margin-block-end: 10px;
     background: linear-gradient(130deg,rgba(0, 79, 89, 1) 51%, rgba(35, 0, 112, 1) 100%);
     transition-duration: 0.2s; 
@@ -195,11 +195,11 @@ h3{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 1, 8, 0.8); /* camada preta */
+    background:rgba(0, 1, 14, 0.8); /* camada preta */
 }
 
 .card4:hover{
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.897);
+    box-shadow: 10px 15px 25px rgb(0, 0, 0);
     margin-block-end: 10px;
     background: linear-gradient(130deg,rgba(0, 79, 89, 1) 51%, rgba(35, 0, 112, 1) 100%);
     transition-duration: 0.2s; 
