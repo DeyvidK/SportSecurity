@@ -14,7 +14,7 @@ main{
 .imagemcarro{ 
     background-image: url(../../../../assets/carro1.png);
     width: 100%;
-    height:928px;
+    height:830px;
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@ main{
 .texto{
     position: absolute;
     width: 100%;
-    height: 928px;
+    height: 830px;
     background-color: rgba(0, 0, 7, 0.63);
     background-size: cover;      
     background-position: center;
@@ -50,6 +50,18 @@ main{
     display: flex;
     width: 810px;
     height: 270px;
+    
+}
+
+.sub{
+    position: relative;
+    left: 18%;
+    top: 17%;
+    display: flex;
+    width: 800px;
+    color: #99a1af;
+    font-family: 'bold',sans-serif;
+    font-size: 1.2rem;
     
 }
 

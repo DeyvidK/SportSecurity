@@ -1,21 +1,18 @@
 <header class="cabecalho">
   <div class="marca">
-    <h1>SportSecurity</h1>
+   <a style="text-decoration: none;" href="#"> <h1>SportSecurity</h1></a>
   </div>
 
   <nav class="cabecalho-menu">
     <a class="txtnav" href="#">Início</a>
-    <a class="txtnav" href="">Benefícios</a>
-    <a class="txtnav" href="#">Planos</a>
-    <a class="txtnav" href="#">Depoimentos</a>
-    <a class="txtnav" href="#">Contato</a>
+    <a class="txtnav" href="#descricao">Benefícios</a>
+    <a class="txtnav" href="#planos">Planos</a>
+    <a class="txtnav" href="#contato">Contato</a>
   </nav>
 
   <!-- Se estiver logado -->
   <ng-container *ngIf="user; else naoLogado">
-    <a *ngIf="user" routerLink="/perfil" >
-      <span class="nomeUsuario">Perfil</span>
-    </a>
+    <a class="nomeUsuario" *ngIf="user" routerLink="/perfil" >Perfil</a>
     <a class="logado" href="#" (click)="logout()">Sair</a>
   </ng-container>
 

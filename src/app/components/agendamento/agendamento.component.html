@@ -1,0 +1,41 @@
+<main>
+<div class="conteudo">
+  <h2>Agende sua Revisão</h2>
+  <p class="p">
+    Escolha a data e hora para revisar um de seus veículos cadastrados.
+  </p>
+
+  <div class="agendamento-card">
+    <form (submit)="onSubmit($event, data.value, hora.value, veiculoSelect.value)">
+      <p style="color: #99a1af; font-size: 1rem;">
+        Usuário: <strong>{{ user?.nome || 'não identificado, faça login' }}</strong>
+      </p>
+
+      <select #veiculoSelect required>
+        <option value="">Selecione um veículo</option>
+        <option *ngFor="let v of veiculos" [value]="v.modelo">
+          {{ v.modelo }} — {{ v.placa }}
+        </option>
+      </select>
+
+      <input #data type="date" required />
+      <input #hora type="time" required />
+      <button type="submit">Agendar</button>
+    </form>
+  </div>
+
+
+  <div *ngIf="agendamentos.length > 0" class="agendamentos-lista">
+    <h3>Meus Agendamentos</h3>
+    <ng-container *ngFor="let ag of agendamentos">
+  <div *ngIf="ag.usuario === user?.nome" class="agendamento-item">
+    <p>
+      <strong>{{ ag.veiculo }}</strong> — {{ ag.data }} às {{ ag.hora }}
+    </p>
+    <button type="button" (click)="removerAgendamento(ag)">Excluir</button>
+  </div>
+</ng-container>
+
+  </div>
+</div>
+</main>

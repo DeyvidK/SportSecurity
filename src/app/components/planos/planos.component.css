@@ -63,6 +63,46 @@ h3{
     gap: 5%;
 }
 
+.plan1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.plan2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.plan3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.butplan {
+    text-align: center;
+    text-decoration: none;
+    width: 250px;
+    height: 35px;
+    border: none;
+    background-color: rgb(0, 1, 22);
+    border-radius: 15px;
+    color:  #99a1af;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.butplan:hover {
+    background-color: rgb(0, 3, 31);
+    color: #ffffff;
+}
+
 .textos{
     display: flex;
     width: 332px;

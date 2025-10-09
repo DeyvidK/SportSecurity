@@ -10,7 +10,13 @@
       <input #senha type="password" placeholder="Senha" required />
       <button type="submit" class="register-btn">Cadastrar</button>
     </form>
-  
+  <div class="lgpd">
+  <input type="checkbox" id="aceiteLGPD" [(ngModel)]="lgpdAceito" name="lgpdAceito" required />
+  <label for="aceiteLGPD">
+    Li e concordo com a <a href="/politica-privacidade" target="_blank">Política de Privacidade</a>.
+  </label>
+</div>
+
     <p class="login-link">
       Já tem conta? <a href="#" (click)="abrirLogin($event)">Faça login</a>
     </p>

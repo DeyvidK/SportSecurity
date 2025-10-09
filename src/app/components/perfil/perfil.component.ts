@@ -2,10 +2,11 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
-  imports: [NgIf,FormsModule,NgFor],
+  imports: [NgIf,FormsModule,NgFor,RouterModule],
   templateUrl: './perfil.component.html',
   styleUrl: './perfil.component.css'
 })
@@ -61,14 +62,17 @@ export class PerfilComponent implements OnInit {
       alert('Preencha todos os campos do veículo.');
       return;
     }
+      console.log('➡️ Veículo digitado:', this.novoVeiculo);
 
     this.veiculos.push({ ...this.novoVeiculo });
-    localStorage.setItem('veiculos_' + this.email, JSON.stringify(this.veiculos));
+      console.log('➡️ Veículo digitado:', this.novoVeiculo);
+    localStorage.setItem('veiculos' + this.email, JSON.stringify(this.veiculos));
     this.novoVeiculo = { marca: '', modelo: '', placa: '', ano: '' };
+     console.log('💾 Salvando no localStorage com chave:', this.veiculos[0]);
   }
 
   removerVeiculo(i: number) {
     this.veiculos.splice(i, 1);
-    localStorage.setItem('veiculos_' + this.email, JSON.stringify(this.veiculos));
+    localStorage.setItem('veiculos' + this.email, JSON.stringify(this.veiculos));
   }
 }

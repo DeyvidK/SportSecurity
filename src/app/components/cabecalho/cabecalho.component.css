@@ -51,6 +51,7 @@ nav a{
     color: rgb(167, 167, 167);
     font-size: 18px;
     font-family: 'bold', sans-serif;
+    text-decoration: none;
 }
 
 .logado{
@@ -64,7 +65,7 @@ nav a{
 
 dialog{
     border-radius: 20px;
-    left: 38%;
-    top: 25%;
+    left: 35%;
+    top: 15%;
     
 }

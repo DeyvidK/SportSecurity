@@ -89,4 +89,22 @@
     cursor: pointer;
   }
   .close-btn:hover { color: #00bfff; }
-  
+  .lgpd {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #99a1af;
+  margin: 1rem 0;
+}
+
+.lgpd a {
+  color: #00aaff;
+  text-decoration: underline;
+}
+
+.lgpd input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

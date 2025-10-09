@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-lgpd',
   imports: [RouterModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  templateUrl: './lgpd.component.html',
+  styleUrl: './lgpd.component.css'
 })
-export class FooterComponent {
+export class LgpdComponent {
 
 }

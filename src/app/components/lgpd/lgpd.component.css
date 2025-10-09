@@ -1,0 +1,31 @@
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-block-end: 5%;
+}
+
+.politica-privacidade {
+  max-width: 800px;
+  padding: 2rem;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.politica-privacidade h1, 
+.politica-privacidade h2 {
+  color: #00aaff;
+}
+
+.politica-privacidade ul {
+  padding-left: 1.5rem;
+}
+
+.politica-privacidade a {
+  color: #00aaff;
+  text-decoration: underline;
+}
