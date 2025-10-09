@@ -3,6 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.hamburger {
+  display: none; /* esconde em telas grandes */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
 header{
     display: flex;
     height: 65px;
@@ -55,12 +70,15 @@ nav a{
 }
 
 .logado{
-    padding-right: 2%;
-    padding-left: 2%;
+    padding-left: 7%;
     text-decoration: none;
     color: rgb(167, 167, 167);
     font-size: 18px;
     font-family: 'bold', sans-serif;
+}
+
+.entrar{
+    padding-right: 2%;
 }
 
 dialog{
@@ -68,4 +86,52 @@ dialog{
     left: 35%;
     top: 15%;
     
+}
+
+@media (max-width: 1000px) {
+  /* Mostrar hamburger */
+  .entrar{
+    padding-right: 10%;
+}
+header{
+    height: 50px;
+}
+
+h1{
+    font-size: 1rem;
+}
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  /* Esconder menu padrão */
+  nav.cabecalho-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: rgba(0,0,0,0.9);
+    width: 200px;
+    display: none; /* inicial */
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+  }
+
+  /* Abrir menu ao clicar */
+  nav.cabecalho-menu.open {
+    display: flex;
+  }
+
+  nav.cabecalho-menu a {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 560px){
+ .entrar{
+    padding-right: 15%;
+}
 }

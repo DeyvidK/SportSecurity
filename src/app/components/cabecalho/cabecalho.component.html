@@ -3,30 +3,39 @@
    <a style="text-decoration: none;" href="#"> <h1>SportSecurity</h1></a>
   </div>
 
-  <nav class="cabecalho-menu">
+ <div class="hamburger" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav class="cabecalho-menu" [class.open]="menuOpen">
     <a class="txtnav" href="#">Início</a>
     <a class="txtnav" href="#descricao">Benefícios</a>
     <a class="txtnav" href="#planos">Planos</a>
     <a class="txtnav" href="#contato">Contato</a>
-  </nav>
-
+ </nav>
+ 
+<div class="entrar">
   <!-- Se estiver logado -->
   <ng-container *ngIf="user; else naoLogado">
     <a class="nomeUsuario" *ngIf="user" routerLink="/perfil" >Perfil</a>
-    <a class="logado" href="#" (click)="logout()">Sair</a>
+    <a class="logado" href="#" (click)="logout()" >Sair</a>
   </ng-container>
 
   <!-- Se não estiver logado -->
   <ng-template #naoLogado>
     <a class="logado" style="padding-right: 20px;" href="#" (click)="modalOpen($event)">Login</a>
   </ng-template>
-</header>
+</div>
 
 <!-- Seus modais permanecem iguais -->
-<dialog #loginDialog #dialogRef id="loginModal" class="modal">
+<dialog  #loginDialog #dialogRef id="loginModal" class="modal">
   <app-login (close)="loginDialog.close()" (openRegister)="abrirCadastro()"></app-login>
 </dialog>
 
 <dialog #registerDialog class="modal">
   <app-cadastro (close)="fecharCadastro()" (openLogin)="abrirLogin()"></app-cadastro>
 </dialog>
+ 
+</header>

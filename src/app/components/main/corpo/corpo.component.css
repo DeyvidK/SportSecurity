@@ -1,37 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-main{
+
+main {
     padding-top: 65px;
     height: 100%;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.imagemcarro{ 
+
+/* Imagem de fundo */
+.imagemcarro { 
     background-image: url(../../../../assets/carro1.png);
     width: 100%;
-    height:830px;
+    height: 830px;
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
 }
 
-
-.texto{
+/* Overlay de texto */
+.texto {
     position: absolute;
     width: 100%;
     height: 830px;
     background-color: rgba(0, 0, 7, 0.63);
-    background-size: cover;      
-    background-position: center;
     z-index: 1;
 }
 
-.seguro{
+/* Texto "Seguro" */
+.seguro {
     position: relative;
     width: 250px;
     height: 50px;
@@ -43,54 +44,93 @@ main{
     font-size: 0.85rem;
 }
 
-.titulo{
+/* Título */
+.titulo {
     position: relative;
     left: 18%;
     top: 17%;
     display: flex;
     width: 810px;
     height: 270px;
-    
 }
 
-.sub{
+/* Subtítulo */
+.sub {
     position: relative;
     left: 18%;
     top: 17%;
     display: flex;
     width: 800px;
     color: #99a1af;
-    font-family: 'bold',sans-serif;
+    font-family: 'Bold',sans-serif;
     font-size: 1.2rem;
-    
 }
 
-h1{
-    font-family: 'bold', sans-serif;
+/* H1 */
+h1 {
+    font-family: 'Bold', sans-serif;
     font-weight: 700;
     font-size: 4.5rem;
     color: white;
 }
 
-@media screen and (max-width: 1366px){
-    .imagemcarro{ 
-        background-image: url(../../../../assets/carro1.png);
-        width: 100%;
-        height:655px;
-        background-size: cover;      
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
-    
-    .texto{
-        position: absolute;
-        width: 100%;
-        height: 655px;
-        background-color: rgba(0, 0, 7, 0.63);
-        background-size: cover;      
-        background-position: center;
-        z-index: 1;
-    }
+/* Media Queries */
 
+/* Telas grandes / projetores */
+@media screen and (min-width: 1920px) {
+    .imagemcarro,
+    .texto {
+        height: 950px;
+    }
+    h1 { font-size: 5.5rem; }
+    .sub { font-size: 1.5rem; }
+}
+
+/* Laptops / desktops menores */
+@media screen and (max-width: 1366px){
+    .imagemcarro,
+    .texto {
+        height: 655px;
+    }
+    .seguro { left: 15%; top: 12%; font-size: 0.8rem; }
+    .titulo { left: 15%; top: 14%; width: 700px; height: 220px; }
+    .sub { left: 15%; top: 14%; width: 700px; font-size: 1rem; }
+    h1 { font-size: 3.5rem; }
+}
+
+/* Tablets */
+@media screen and (max-width: 1000px) {
+    .imagemcarro,
+    .texto {
+        height: 550px;
+    }
+    .seguro { left: 12%; top: 10%; font-size: 0.75rem; }
+    .titulo { left: 12%; top: 12%; width: 600px; height: 180px; }
+    .sub { left: 12%; top: 12%; width: 600px; font-size: 0.95rem; }
+    h1 { font-size: 3rem; }
+    main{padding-top: 50px;}
+}
+
+/* Celulares */
+@media screen and (max-width: 768px) {
+    .imagemcarro,
+    .texto {
+        height: 450px;
+    }
+    .seguro { left: 10%; top: 8%; font-size: 0.7rem; }
+    .titulo { left: 10%; top: 10%; width: 90%; height: 140px; }
+    .sub { left: 10%; top: 10%; width: 90%; font-size: 0.9rem; }
+    h1 { font-size: 2.5rem; }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 480px) {
+    .imagemcarro,
+    .texto {
+        height: 350px;
+    }
+    .seguro { left: 5%; top: 6%; font-size: 0.6rem; }
+    .titulo { left: 5%; top: 8%; width: 90%; height: 120px; }
+    .sub { left: 5%; top: 8%; width: 90%; font-size: 0.8rem; }
+    h1 { font-size: 2rem; }
 }

@@ -114,3 +114,9 @@
 .close-btn:hover {
   color: #00bfff;
 }
+
+@media (max-width: 950px){
+  .login-container{
+    width: 300px;
+  }
+}

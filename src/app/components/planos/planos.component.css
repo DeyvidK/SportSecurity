@@ -10,7 +10,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-block-end: 200px;
+    padding-block-end: 100px;
 }
 
 h2{
@@ -59,7 +59,7 @@ h3{
     justify-content: center;
     padding-top: 17%; 
     height: 713px;
-    width: 1216px;
+    width: 100%;
     gap: 5%;
 }
 
@@ -138,4 +138,41 @@ td{
 .tdtext{
     width: 270px;
     text-align: left;
+}
+@media (max-width: 1000px){
+    .conteudo{
+        margin-top: 15%;
+        height: 30%;
+        gap: 5%;
+    }
+    .cards{
+        flex-direction: column;
+        margin: auto;
+        height: auto;
+        gap: 5%;
+    }
+      h2{
+        font-size: 2.5rem;
+        padding: 5%;
+    }
+    .p{
+        font-size: 1rem;
+    }
+    .paragrafo{
+        font-size: 0.7rem;
+    }
+    .plan1,.plan2{
+        margin-block-end: 7%;
+    }
+
+    .info-contrato{
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px){
+    .info-contrato{
+        width: 350px;
+        font-size: 0.8rem;
+    }
 }

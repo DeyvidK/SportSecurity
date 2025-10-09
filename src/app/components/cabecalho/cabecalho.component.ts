@@ -12,6 +12,15 @@ import { RouterModule } from '@angular/router';
   styleUrl: './cabecalho.component.css'
 })
 export class CabecalhoComponent implements OnInit {
+
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+
+
   @ViewChild('dialogRef') dialogRef!: ElementRef<HTMLDialogElement>;
   @ViewChild('registerDialog') registerDialog!: ElementRef<HTMLDialogElement>;
 
