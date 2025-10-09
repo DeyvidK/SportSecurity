@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #00010e;
+  color: #ffffff;
+  font-family: 'bold', sans-serif;
+  padding-top: 120px;
+}
+
+/* ======== TÍTULO ======== */
+.perfil-container h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.perfil-container p.subtitle {
+  color: #99a1af;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.mudanca{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15%;
+  padding-block-end: 5%;
+}
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perfil-form input {
+   width: 185px;
+  height: 31px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* ======== CARD PRINCIPAL ======== */
+.perfil-card {
+  position: relative;
+  background: rgba(0, 1, 14, 0.85);
+  border-radius: 12px;
+  width: 70%;
+  max-width: 900px;
+  padding: 50px 60px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  overflow: hidden;
+}
+
+.perfil-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 1, 14, 0.7);
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.perfil-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======== INFORMAÇÕES DO USUÁRIO ======== */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.info-section input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0a0a0a;
+  color: white;
+  font-size: 1rem;
+  border: 1px solid #1b1b1b;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.info-section input:focus {
+  border-color: #004f59;
+  background-color: #111;
+}
+
+/* ======== BOTÕES ======== */
+button {
+  margin-top: 20px;
+  background: linear-gradient(130deg, rgba(0, 79, 89, 1) 51%, rgba(35, 0, 112, 1) 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 0 20px rgba(0, 79, 89, 0.8);
+  transform: translateY(-3px);
+}
+
+/* ======== SEÇÃO DE VEÍCULOS ======== */
+.veiculos-section {
+  margin-top: 40px;
+}
+
+.veiculos-section h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.add-veiculo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.add-veiculo input {
+  width: 185px;
+  height: 31px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #1b1b1b;
+  background-color: #0a0a0a;
+  color: white;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.add-veiculo input:focus {
+  border-color: #004f59;
+}
+
+.add-veiculo button {
+  background: linear-gradient(130deg, rgba(0, 79, 89, 1) 51%, rgba(35, 0, 112, 1) 100%);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
+
+.add-veiculo button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(35, 0, 112, 0.6);
+}
+
+/* ======== LISTA DE VEÍCULOS ======== */
+.veiculos-lista {
+  display: flex;
+  gap: 15px;
+  margin-block-end: 10%;
+}
+
+.veiculo-card {
+  position: relative;
+  background: rgba(0, 1, 14, 0.9);
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #99a1af;
+  border: 1px solid #1b1b1b;
+  transition: all 0.3s ease;
+}
+
+.veiculo-card:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+.remove-btn {
+  margin-top: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .perfil-card {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .info-section input {
+    width: 90%;
+  }
+
+  .add-veiculo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+
+/*
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perfil-form input {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+}*/

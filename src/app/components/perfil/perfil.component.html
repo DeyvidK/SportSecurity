@@ -1,0 +1,42 @@
+<div class="perfil-container">
+  <h2>Meu Perfil</h2>
+
+  <div class="mudanca">
+    <div class="perfil-form">
+      <label>Nome:</label>
+      <input type="text" [(ngModel)]="nome" />
+
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="email" disabled />
+
+      <label>Senha:</label>
+      <input type="password" [(ngModel)]="senha" />
+
+      <button (click)="salvarPerfil()">Salvar Alterações</button>
+    </div>
+
+    <div class="veiculos-section">
+      <div class="add-veiculo">
+        <input type="text" placeholder="Marca" [(ngModel)]="novoVeiculo.marca" />
+        <input type="text" placeholder="Modelo" [(ngModel)]="novoVeiculo.modelo" />
+        <input type="text" placeholder="Placa" [(ngModel)]="novoVeiculo.placa" />
+        <input type="number" placeholder="Ano" [(ngModel)]="novoVeiculo.ano" />
+        <button (click)="adicionarVeiculo()">Adicionar</button>
+      </div>
+    </div>
+  </div>
+    <h3 style="padding-block-end: 2%;">Meus Veículos</h3>
+    <div *ngIf="veiculos.length > 0; else semVeiculos" class="veiculos-lista">  
+      <div *ngFor="let v of veiculos; let i = index" class="veiculo-card">
+        <p><strong>{{ v.marca }} {{ v.modelo }}</strong></p>
+        <p>Placa: {{ v.placa }}</p>
+        <p>Ano: {{ v.ano }}</p>
+        <button class="remove-btn" (click)="removerVeiculo(i)">Remover</button>
+      </div>
+    </div>
+
+    <ng-template #semVeiculos>
+      <p>Nenhum veículo adicionado ainda.</p>
+    </ng-template>
+  
+</div>
