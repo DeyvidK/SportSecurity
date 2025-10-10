@@ -44,6 +44,7 @@
 .perfil-form {
   display: flex;
   flex-direction: column;
+  padding-top: 12%;
   gap: 10px;
 }
 

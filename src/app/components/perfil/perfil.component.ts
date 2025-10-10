@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -6,7 +6,8 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
-  imports: [NgIf,FormsModule,NgFor,RouterModule],
+  standalone: true,
+  imports: [NgIf, FormsModule, NgFor, RouterModule],
   templateUrl: './perfil.component.html',
   styleUrl: './perfil.component.css'
 })
@@ -16,28 +17,39 @@ export class PerfilComponent implements OnInit {
   email: string = '';
   senha: string = '';
 
-  // Lista de veículos
   veiculos: any[] = [];
-  novoVeiculo = {
-    marca: '',
-    modelo: '',
-    placa: '',
-    ano: '',
-  };
+  novoVeiculo = { marca: '', modelo: '', placa: '', ano: '' };
 
   constructor(private auth: AuthService) {}
 
   ngOnInit() {
-    this.user = this.auth.getLoggedUser();
+    // 🔹 Tenta recuperar o usuário logado
+    this.user = this.auth.getLoggedUser
+      ? this.auth.getLoggedUser()
+      : null;
 
+    // 🔹 Se ainda não tiver o usuário (ex: login acabou de acontecer)
+    if (!this.user) {
+      const storedUser = localStorage.getItem('usuarioLogado');
+      if (storedUser) {
+        this.user = JSON.parse(storedUser);
+      }
+    }
+
+    // 🔹 Carrega dados do usuário
     if (this.user) {
       this.nome = this.user.nome;
       this.email = this.user.email;
       this.senha = this.user.senha;
-    }
 
-    const veiculosSalvos = localStorage.getItem('veiculos_' + this.email);
-    this.veiculos = veiculosSalvos ? JSON.parse(veiculosSalvos) : [];
+      // 🔹 Carrega veículos salvos para esse usuário
+      const key = 'veiculos_' + this.email.toLowerCase();
+      const veiculosSalvos = localStorage.getItem(key);
+      this.veiculos = veiculosSalvos ? JSON.parse(veiculosSalvos) : [];
+      console.log('🚗 Veículos carregados:', this.veiculos);
+    } else {
+      console.warn('⚠️ Nenhum usuário logado encontrado no perfil.');
+    }
   }
 
   salvarPerfil() {
@@ -49,6 +61,8 @@ export class PerfilComponent implements OnInit {
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
       localStorage.setItem('usuarioLogado', JSON.stringify(usuarios[idx]));
       alert('Perfil atualizado com sucesso!');
+    } else {
+      alert('Usuário não encontrado!');
     }
   }
 
@@ -62,17 +76,20 @@ export class PerfilComponent implements OnInit {
       alert('Preencha todos os campos do veículo.');
       return;
     }
-      console.log('➡️ Veículo digitado:', this.novoVeiculo);
 
     this.veiculos.push({ ...this.novoVeiculo });
-      console.log('➡️ Veículo digitado:', this.novoVeiculo);
-    localStorage.setItem('veiculos' + this.email, JSON.stringify(this.veiculos));
+
+    const key = 'veiculos_' + this.email.toLowerCase();
+    localStorage.setItem(key, JSON.stringify(this.veiculos));
+
+    console.log('💾 Veículo salvo em:', key);
     this.novoVeiculo = { marca: '', modelo: '', placa: '', ano: '' };
-     console.log('💾 Salvando no localStorage com chave:', this.veiculos[0]);
   }
 
   removerVeiculo(i: number) {
     this.veiculos.splice(i, 1);
-    localStorage.setItem('veiculos' + this.email, JSON.stringify(this.veiculos));
+    const key = 'veiculos_' + this.email.toLowerCase();
+    localStorage.setItem(key, JSON.stringify(this.veiculos));
+    console.log('❌ Veículo removido da chave:', key);
   }
 }
